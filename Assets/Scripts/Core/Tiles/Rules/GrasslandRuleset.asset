@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dd13982e57860f439e7523f5c872bc3, type: 3}
+  m_Name: GrasslandRuleset
+  m_EditorClassIdentifier: 
+  Rules:
+  - {fileID: 11400000, guid: 95344e52178277d43ac68ca3df2e8e6a, type: 2}
+  - {fileID: 11400000, guid: d1743b2faad6c8b4a903680de5c87430, type: 2}
+  - {fileID: 11400000, guid: ddcbf63c9a332a347b99f4460e4dd250, type: 2}
+  - {fileID: 11400000, guid: 0058882a9a9c52c45a47ad2a7d997bd9, type: 2}
+  - {fileID: 11400000, guid: 51015d7f57e9e1d4a9017eca18dae285, type: 2}
+  - {fileID: 11400000, guid: d2a37c9dc9b62614db5e0aa160513557, type: 2}
+  - {fileID: 11400000, guid: 28b23527de6918e48b666048d2513ac5, type: 2}
+  - {fileID: 11400000, guid: ccd5e1221687f4343817e88139d63310, type: 2}
+  - {fileID: 11400000, guid: 886619c0bd50d5345b890a6fd921534c, type: 2}
+  - {fileID: 11400000, guid: 9bca53baa3d5b4d4995ebb456130e916, type: 2}
+  - {fileID: 11400000, guid: 8d8d63391f7cbdf41b540604535c8341, type: 2}
+  - {fileID: 11400000, guid: a136401d0f694cd4390bd75f614f486c, type: 2}
+  - {fileID: 11400000, guid: b061a1f668c14f8498b6cd8a279a629f, type: 2}
+  - {fileID: 11400000, guid: 0747464e0e4388745849c43d27da521e, type: 2}

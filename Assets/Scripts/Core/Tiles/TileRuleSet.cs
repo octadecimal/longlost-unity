@@ -6,13 +6,4 @@ public class TileRuleSet : ScriptableObject
 {
     public TileRule[] Rules;
 
-    public TileBase GetTile(int[,] grid, int x, int y)
-    {
-        return null;
-    }
-
-    private int GetNeighborType()
-    {
-        return 0;
-    }
 }

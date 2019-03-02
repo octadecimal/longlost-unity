@@ -10,16 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb45b4395463c2a46af43ff81527ee0c, type: 3}
-  m_Name: TileRule
+  m_Name: Road
   m_EditorClassIdentifier: 
   Type: 2
-  Tiles: []
-  Weights: []
-  North: 0
+  Tiles:
+  - {fileID: 11400000, guid: 10dc67fc7597fac4ba63d54c529e9e63, type: 2}
+  - {fileID: 11400000, guid: f52f5759c6d1e354890c80d44970f107, type: 2}
+  - {fileID: 11400000, guid: 1da027e2e0de0984ab6901d1818368c8, type: 2}
+  Weights:
+  - 1
+  North: 2
+  East: 2
+  South: 2
+  West: 2
   NorthEast: 0
-  East: 0
   SouthEast: 0
-  South: 0
   SouthWest: 0
-  West: 0
   NorthWest: 0

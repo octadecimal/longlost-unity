@@ -9,12 +9,14 @@ public class TileRule : ScriptableObject
     public float[] Weights;
 
     public TileType North;
-    public TileType NorthEast;
     public TileType East;
-    public TileType SouthEast;
     public TileType South;
-    public TileType SouthWest;
     public TileType West;
+    public TileType NorthEast;
+    public TileType SouthEast;
+    public TileType SouthWest;
     public TileType NorthWest;
+
+
 
 }
