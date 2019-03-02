@@ -6,6 +6,7 @@ public class TileGrid : MonoBehaviour
     public int Width;
     public int Height;
     public TileRuleSet RuleSet;
+    public bool Debug;
 
     private TileType[,] _cells;
 
@@ -30,6 +31,12 @@ public class TileGrid : MonoBehaviour
         {
             Paint();
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug = !Debug;
+            Paint();
+        }
     }
 
     public void Set()
@@ -39,12 +46,10 @@ public class TileGrid : MonoBehaviour
 
     public void Fill(TileType type, int x, int y, int width, int height)
     {
-        Debug.Log("Starting fill: x=" + x + " y=" + y + " w=" + width + " h=" + height);
         for (int j = 0; j < height; j++)
         {
             for (int i = 0; i < width; i++)
             {
-                Debug.Log("Filling: " + type + " @ " + (x + i) + "," + (y + j));
                 _cells[x + i, y + j] = type;
             }
         }
@@ -88,12 +93,11 @@ public class TileGrid : MonoBehaviour
         // Return best scoring rule
         if (bestRule)
         {
-            float index = Mathf.Pow(Random.Range(0f, 1f), 5f) * bestRule.Tiles.Length;
+            float index = Debug ? 0 : Mathf.Pow(Random.Range(0f, 1f), 5f) * bestRule.Tiles.Length;
             return bestRule.Tiles[(int)index];
         }
         else
         {
-            Debug.LogError("Tile not found at: " + x + "," + y);
             return null;
         }
     }
@@ -115,13 +119,16 @@ public class TileGrid : MonoBehaviour
 
     private int ScoreRuleDirection(TileType matchType, int x, int y, int offsetX, int offsetY)
     {
-        if (x == 3 && y == 3)
-        {
-            Debug.Log(matchType);
-        }
-
         TileType neighborType = GetNeighborType(x, y, offsetX, offsetY);
         bool pass = neighborType == matchType || neighborType == TileType.Any || matchType == TileType.Any;
+
+        if (Debug)
+        {
+            if (matchType == TileType.Any)
+            {
+                return 100;
+            }
+        }
 
         if (neighborType == matchType)
         {
@@ -130,7 +137,7 @@ public class TileGrid : MonoBehaviour
 
         if (neighborType == TileType.Any || matchType == TileType.Any)
         {
-            return 0;
+            return 1;
         }
 
         return 0;

@@ -19,10 +19,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1da027e2e0de0984ab6901d1818368c8, type: 2}
   Weights:
   - 1
-  North: 2
-  East: 2
-  South: 2
-  West: 2
+  North: 0
+  East: 0
+  South: 0
+  West: 0
   NorthEast: 0
   SouthEast: 0
   SouthWest: 0
