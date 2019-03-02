@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb45b4395463c2a46af43ff81527ee0c, type: 3}
-  m_Name: RoadField_N
+  m_Name: HillField_W
   m_EditorClassIdentifier: 
-  Type: 2
+  Type: 4
   Tiles:
-  - {fileID: 11400000, guid: b4e06e5d24810a04e8f3a6f3b26659ad, type: 2}
-  Weights: []
-  North: 3
-  East: 2
-  South: 2
-  West: 2
+  - {fileID: 11400000, guid: 8110fcc1368d8d44a847098a23d22b26, type: 2}
+  Weights:
+  - 1
+  North: 4
+  East: 4
+  South: 4
+  West: 3
   NorthEast: 0
   SouthEast: 0
   SouthWest: 0

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb45b4395463c2a46af43ff81527ee0c, type: 3}
+  m_Name: HillField_S
+  m_EditorClassIdentifier: 
+  Type: 4
+  Tiles:
+  - {fileID: 11400000, guid: 7f6b56af49e789f44938e04df9e19496, type: 2}
+  Weights: []
+  North: 4
+  East: 4
+  South: 3
+  West: 4
+  NorthEast: 0
+  SouthEast: 0
+  SouthWest: 0
+  NorthWest: 0

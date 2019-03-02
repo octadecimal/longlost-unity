@@ -9,19 +9,24 @@ public class TileGrid : MonoBehaviour
     public bool Debug;
 
     private TileType[,] _cells;
+    private TileMapGenerator _generator;
 
     public void Start()
     {
         _cells = new TileType[Width, Height];
+        _generator = GetComponent<TileMapGenerator>();
 
-        Fill(TileType.Field, 0, 0, Width, Height);
-        // Fill(TileType.Road, 5, 0, 2, Height);
-        // Fill(TileType.Road, 0, 4, 12, 2);
+        /*Fill(TileType.Field, 0, 0, Width, Height);
 
         Fill(TileType.Road, 2, 2, 8, 12);
         Fill(TileType.Field, 4, 4, 4, 8);
         Fill(TileType.Road, 5, 0, 2, Height);
-        Fill(TileType.Road, 0, 6, 12, 2);
+        Fill(TileType.Road, 0, 6, 12, 2); */
+
+        _generator.Generate();
+        Fill(TileType.Field, 6, 0, 4, Height);
+        Fill(TileType.Road, 7, 0, 2, Height);
+
         Paint();
     }
 
@@ -39,9 +44,9 @@ public class TileGrid : MonoBehaviour
         }
     }
 
-    public void Set()
+    public void Set(TileType type, int x, int y)
     {
-
+        this._cells[x, y] = type;
     }
 
     public void Fill(TileType type, int x, int y, int width, int height)
@@ -133,6 +138,11 @@ public class TileGrid : MonoBehaviour
         if (neighborType == matchType)
         {
             return 10;
+        }
+
+        if (neighborType != matchType && matchType != TileType.Any)
+        {
+            return -100;
         }
 
         if (neighborType == TileType.Any || matchType == TileType.Any)

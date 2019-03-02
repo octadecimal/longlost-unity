@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb45b4395463c2a46af43ff81527ee0c, type: 3}
+  m_Name: WaterField_E
+  m_EditorClassIdentifier: 
+  Type: 1
+  Tiles:
+  - {fileID: 11400000, guid: a8a0919c4a23ad848af956db40d2d3f7, type: 2}
+  - {fileID: 11400000, guid: 40fe8f6a2b9216a4da088d3b4f1eb9a5, type: 2}
+  Weights:
+  - 1
+  North: 1
+  East: 3
+  South: 1
+  West: 1
+  NorthEast: 0
+  SouthEast: 0
+  SouthWest: 0
+  NorthWest: 0

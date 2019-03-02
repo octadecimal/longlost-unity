@@ -17,20 +17,21 @@ public class CameraController : MonoBehaviour
 
         if (Input.touchCount > 0)
         {
+            Debug.Log(Input.GetTouch(0).deltaPosition);
             if (Input.GetTouch(0).phase == TouchPhase.Moved)
             {
                 delta = Input.GetTouch(0).deltaPosition;
+                delta.y *= 0.05f;
             }
         }
 
-        if (Input.GetMouseButton(0))
+        else if (Input.GetMouseButton(0))
         {
             delta.y = Input.GetAxis("Mouse Y") * 0.1f;
-            Debug.Log(Input.GetAxis("Mouse Y"));
         }
 
         transform.Translate(0, -delta.y, 0);
 
-        Camera.main.orthographicSize = 12 * (float)Screen.height / (float)Screen.width * 0.5f;
+        Camera.main.orthographicSize = 14 * (float)Screen.height / (float)Screen.width * 0.5f;
     }
 }
